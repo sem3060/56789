@@ -38,42 +38,42 @@ jobs:
       run: |
          touch ./j60.m3u8
          sudo cat >./j60.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         #EXTM3U
+         #EXT-X-VERSION:3
+         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
          $(yt-dlp --print urls https://www.youtube.com/watch?v=RiHSzRu4kLw)
          EOL
          
          # j61富士山・日本平ライブカメラ Mt.Fuji
     - name: Get j61.m3u8
       run: |
-        touch ./j61.m3u8
-        sudo cat >./j61.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         touch ./j61.m3u8
+         sudo cat >./j61.m3u8 <<EOL
+         #EXTM3U
+         #EXT-X-VERSION:3
+         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
          $(yt-dlp --print urls https://www.youtube.com/watch?v=RiHSzRu4kLw)
          EOL
          
          # j62【富山テレビ】お天気カメラライブ配信
     - name: Get j62.m3u8
       run: |
-        touch ./j62.m3u8
-        sudo cat >./j62.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         touch ./j62.m3u8
+         sudo cat >./j62.m3u8 <<EOL
+         #EXTM3U
+         #EXT-X-VERSION:3
+         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
          $(yt-dlp --print urls https://www.youtube.com/watch?v=Np3S5E4hGlQ)
          EOL
          
          #j63ケーブルテレビ富山 の定点カメラライブ配信
     - name: Get j63.m3u8
       run: |
-        touch ./j63.m3u8
-        sudo cat >./j63.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         touch ./j63.m3u8
+         sudo cat >./j63.m3u8 <<EOL
+         #EXTM3U
+         #EXT-X-VERSION:3
+         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
          $(yt-dlp --print urls https://www.youtube.com/watch?v=C4Zw36h6GJk)
          EOL 
          
