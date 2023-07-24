@@ -30,7 +30,7 @@ jobs:
          #EXTM3U
          #EXT-X-VERSION:3
          #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-         $(yt-dlp --print urls https://www.youtube.com/watch?v=qNqChUFYiVc)
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=b-oG8d-eco0)
          EOL
          
          # j60富士本栖湖リゾート・ライブカメラ
@@ -107,7 +107,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-         $(yt-dlp --print urls https://www.youtube.com/watch?v=ZAwOiSKL4Xc)
+        $(yt-dlp --print urls https://www.youtube.com/watch?v=ZAwOiSKL4Xc)
          EOL
          
          #j67立山映像ライブカメラ（立山連峰東側）
@@ -118,7 +118,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-         $(yt-dlp --print urls https://www.youtube.com/watch?v=oKue-8zO_oI)
+        $(yt-dlp --print urls https://www.youtube.com/watch?v=oKue-8zO_oI)
          EOL
          
          #j68富山市ライブ配信（西の空監視ほぼ無人LIVE）
