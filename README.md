@@ -18,7 +18,7 @@ j67.立山映像ライブカメラ（立山連峰東側）,https://raw.githubuse
 
 j68.富山市ライブ配信（西の空監視ほぼ無人LIVE）,https://raw.githubusercontent.com/sem3060/56789/main/j68.m3u8
 
-j69.バイク・車で走れる砂浜・能登千里浜レストハウス（石川県),https://raw.githubusercontent.com/sem3060/56789/main/j69.m3u8
+j69.美しい夕日の千里浜サンセット（石川県）,https://raw.githubusercontent.com/sem3060/56789/main/j69.m3u8
 
 j70.KNB駅北カメラ（富山駅北）,https://raw.githubusercontent.com/sem3060/56789/main/j70.m3u8
 
