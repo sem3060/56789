@@ -132,7 +132,7 @@ jobs:
          $(yt-dlp --print urls https://www.youtube.com/watch?v=2c7SeLHYmWM)
          EOL
          
-         #j69バイク・車で走れる砂浜・能登千里浜レストハウス（石川県）
+         #j69美しい夕日の千里浜サンセット（石川県）
     - name: Get j69.m3u8
       run: |
          touch ./j69.m3u8
