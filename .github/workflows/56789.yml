@@ -1,0 +1,329 @@
+name: Get YouTube Live m3u8
+on:
+  schedule:
+    - cron: '0 0/3 * * *'
+ 
+  pull_request:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: config
+      run: |
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+    - name: Install yt-dlp
+      run: |
+        sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+        sudo chmod a+rx /usr/local/bin/yt-dlp
+        # j59信州・美ヶ原2034mのライブカメラ（南向き）
+    - name: Get j59.m3u8
+      run: |
+        touch ./j59.m3u8
+        sudo cat >./j59.m3u8 <<EOL
+         #EXTM3U
+         #EXT-X-VERSION:3
+         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=qNqChUFYiVc)
+         EOL
+         
+         # j60富士本栖湖リゾート・ライブカメラ
+    - name: Get j60.m3u8
+      run: |
+         touch ./j60.m3u8
+         sudo cat >./j60.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=RiHSzRu4kLw)
+         EOL
+         
+         # j61富士山・日本平ライブカメラ Mt.Fuji
+    - name: Get j61.m3u8
+      run: |
+        touch ./j61.m3u8
+        sudo cat >./j61.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=RiHSzRu4kLw)
+         EOL
+         
+         # j62【富山テレビ】お天気カメラライブ配信
+    - name: Get j62.m3u8
+      run: |
+        touch ./j62.m3u8
+        sudo cat >./j62.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=Np3S5E4hGlQ)
+         EOL
+         
+         #j63ケーブルテレビ富山 の定点カメラライブ配信
+    - name: Get j63.m3u8
+      run: |
+        touch ./j63.m3u8
+        sudo cat >./j63.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=C4Zw36h6GJk)
+         EOL 
+         
+         #j64KNBライブ配信
+    - name: Get j64.m3u8
+      run: |
+        touch ./j64.m3u8
+        sudo cat >./j64.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=U-xjkvQE-ck)
+         EOL
+         
+         #j65富山テレビ】北アルプス立山室堂お天気カメラ ライブ配信
+    - name: Get j65.m3u8
+      run: |
+        touch ./j65.m3u8
+        sudo cat >./j65.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=CiE7qRN895I)
+         EOL
+         
+         #j66ライブ配信　富山市内（タワー１１１屋上情報カメラ）
+    - name: Get j66.m3u8
+      run: |
+        touch ./j66.m3u8
+        sudo cat >./j66.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=ZAwOiSKL4Xc)
+         EOL
+         
+         #j67立山映像ライブカメラ（立山連峰東側）
+    - name: Get j67.m3u8
+      run: |
+        touch ./j67.m3u8
+        sudo cat >./j67.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=oKue-8zO_oI)
+         EOL
+         
+         #j68富山市ライブ配信（西の空監視ほぼ無人LIVE）
+    - name: Get j68.m3u8
+      run: |
+        touch ./j68.m3u8
+        sudo cat >./j68.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=2c7SeLHYmWM)
+         EOL
+         
+         #j69バイク・車で走れる砂浜・能登千里浜レストハウス（石川県）
+    - name: Get j69.m3u8
+      run: |
+        touch ./j69.m3u8
+        sudo cat >./j69.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=GcVWo1DOeGc)
+         EOL
+         
+         #j70KNB駅北カメラ（富山駅北）
+    - name: Get j70.m3u8
+      run: |
+        touch ./j70.m3u8
+        sudo cat >./j70.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=brLYHa4JzPM)
+         EOL
+         
+         #j71立山映像ライブカメラ（立山連峰南側）
+    - name: Get j71.m3u8
+      run: |
+        touch ./j71.m3u8
+        sudo cat >./j71.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=Nrj4EGPxi8g)
+         EOL
+         
+         #j72常願寺川、神通川、庄川、小矢部川水系／主要河川映像
+    - name: Get j72.m3u8
+      run: |
+        touch ./j72.m3u8
+        sudo cat >./j72.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=yGBiRYtHHZk)
+         EOL
+         
+         #j73富士山測候所を活用する会が富士山頂からライブ配信
+    - name: Get j73.m3u8
+      run: |
+        touch ./j73.m3u8
+        sudo cat >./j73.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=Pm6rYzR_bnk)
+         EOL
+         
+         #j74富山駅北から立山連峰方面
+    - name: Get j74.m3u8
+      run: |
+        touch ./j74.m3u8
+        sudo cat >./j74.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=U0pljc5Pxyc)
+         EOL
+         
+         #j75ホテル森の風立山【ライブカメラ】藤橋より称名滝方面
+    - name: Get j75.m3u8
+      run: |
+        touch ./j75.m3u8
+        sudo cat >./j75.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=Xm-NEujb3dg)
+         EOL
+         
+         #j76チューリップテレビ-ニュースライブ
+    - name: Get j76.m3u8
+      run: |
+        touch ./j76.m3u8
+        sudo cat >./j76.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=Gk8d6k1Tn6w)
+         EOL
+         
+         #j77新潟駅前ライブカメラ-リニューアル工事が進む新潟駅
+    - name: Get j77.m3u8
+      run: |
+        touch ./j77.m3u8
+        sudo cat >./j77.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=InjWVxkg5tc)
+         EOL
+         
+         #j78海王丸ライブカメラ
+    - name: Get j78.m3u8
+      run: |
+        touch ./j78.m3u8
+        sudo cat >./j78.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=-UsW0JsRZXM)
+         EOL
+         
+         #j79情報カメラLive配信＜県内4ヵ所を24時間ライブ配信＞
+    - name: Get j79.m3u8
+      run: |
+        touch ./j79.m3u8
+        sudo cat >./j79.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=-FQqz_gavZo)
+         EOL
+         
+         #j80RAB青森放送 のライブ映像
+    - name: Get j80.m3u8
+      run: |
+        touch ./j80.m3u8
+        sudo cat >./j80.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=rkWkJqXO2rM)
+         EOL
+         
+         #j81ライブカメラ 白山室堂
+    - name: Get j81.m3u8
+      run: |
+        touch ./j81.m3u8
+        sudo cat >./j81.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=yA2jhpk6GJ0)
+         EOL
+         
+         #j82鳥羽マリンターミナル-ライブ配信
+    - name: Get j82.m3u8
+      run: |
+        touch ./j82.m3u8
+        sudo cat >./j82.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=5VE6iuhbXVE)
+         EOL
+         
+         #j83山形市・酒田市-情報カメラ
+    - name: Get j83.m3u8
+      run: |
+        touch ./j83.m3u8
+        sudo cat >./j83.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=I8fFibyqpAg)
+         EOL
+         
+         #j84FBS福岡放送-ライブ配信
+    - name: Get j84.m3u8
+      run: |
+        touch ./j84.m3u8
+        sudo cat >./j84.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=PLMJP_p5T54)
+         EOL
+         
+         #j85新潟県立紫雲寺記念公園 オートキャンプ場からのライブ配信
+    - name: Get j85.m3u8
+      run: |
+        touch ./j85.m3u8
+        sudo cat >./j85.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=kfMijPgyaUU)
+         EOL
+         
+    - name: git add
+      run: |
+        git add -A
+        ls -la
+    - name: commit & push
+      run: |
+        git commit -m "links are updated"
+        git push
