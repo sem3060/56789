@@ -140,7 +140,7 @@ jobs:
          #EXTM3U
          #EXT-X-VERSION:3
          #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-         $(yt-dlp --print urls https://www.youtube.com/watch?v=GcVWo1DOeGc)
+         $(yt-dlp --print urls https://www.youtube.com/watch?v=mrdsIr8dyTs)
          EOL
          
          #j70KNB駅北カメラ（富山駅北）
